@@ -7,37 +7,36 @@ type Setting = {
   value: string | number | boolean;
 };
 
-export const SettingsData: Setting[] = [
-  {
-    category: "Account",
-    value: true,
-  },
-  {
-    category: "Notifications",
-    value: false,
-  },
-  {
-    category: "Language",
-    value: "English",
-  },
-  {
-    category: "Theme",
-    value: "Light",
-  },
-];
-
-export const columns: ColumnDef<Setting>[] = [
-  {
-    accessorKey: "category",
-    header: "Category",
-  },
-  {
-    accessorKey: "value",
-    header: "Value",
-  },
-];
-
 export default function SettingsPage() {
+  const SettingsData: Setting[] = [
+    {
+      category: "Account",
+      value: true,
+    },
+    {
+      category: "Notifications",
+      value: false,
+    },
+    {
+      category: "Language",
+      value: "English",
+    },
+    {
+      category: "Theme",
+      value: "Light",
+    },
+  ];
+
+  const columns: ColumnDef<Setting>[] = [
+    {
+      accessorKey: "category",
+      header: "Category",
+    },
+    {
+      accessorKey: "value",
+      header: "Value",
+    },
+  ];
   return (
     <div className="flex flex-col gap-5 w-full">
       <PageTitle title="Settings" />
